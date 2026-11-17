@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+  <meta name="description" content="Alquila bicicletas urbanas, de montaña y eléctricas en Medellín.">
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-papel text-tinta antialiased">
+
+  <header class="sticky top-0 z-10 bg-ruta text-white">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between px-4 py-3" aria-label="Principal">
+      <a href="#inicio" class="text-xl font-bold tracking-tight">Rueda Libre</a>
+      <button id="menu-btn" type="button" class="rounded-md border border-white/60 px-3 py-1 text-sm focus:outline-2 focus:outline-offset-2 focus:outline-white md:hidden" aria-expanded="false" aria-controls="menu">Menú</button>
+      <ul id="menu" class="hidden w-full flex-col gap-1 pt-3 md:flex md:w-auto md:flex-row md:gap-6 md:pt-0">
+        <li><a href="#flota" class="block rounded py-2 hover:underline md:py-0">Flota</a></li>
+        <li><a href="#tarifas" class="block rounded py-2 hover:underline md:py-0">Tarifas</a></li>
+        <li><a href="#beneficios" class="block rounded py-2 hover:underline md:py-0">Beneficios</a></li>
+        <li><a href="#reservas" class="block rounded py-2 font-semibold hover:underline md:py-0">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="bg-ruta-oscuro text-white">
+      <div class="mx-auto grid max-w-6xl gap-8 px-4 py-16 md:grid-cols-2 md:items-center lg:py-24">
+        <div>
+          <h1 class="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">Medellín se recorre mejor sobre dos ruedas.</h1>
+          <p class="mt-6 max-w-prose text-lg text-white/90">Alquila por horas o por días, elige tu ruta y sal. Casco y candado incluidos en todas las reservas.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#reservas" class="rounded-lg bg-pedal px-6 py-3 text-center font-bold text-tinta hover:bg-white focus:outline-2 focus:outline-offset-2 focus:outline-white">Reservar ahora</a>
+            <a href="#flota" class="rounded-lg border border-white px-6 py-3 text-center font-semibold hover:bg-white hover:text-ruta-oscuro">Ver la flota</a>
+          </div>
+        </div>
+        <dl class="grid grid-cols-3 gap-4 text-center md:grid-cols-1 md:text-left lg:grid-cols-3 lg:text-center">
+          <div class="rounded-xl bg-white/10 p-4"><dt class="text-sm text-white/80">Modelos</dt><dd class="text-3xl font-bold">7</dd></div>
+          <div class="rounded-xl bg-white/10 p-4"><dt class="text-sm text-white/80">Desde</dt><dd class="text-3xl font-bold">$8.000</dd></div>
+          <div class="rounded-xl bg-white/10 p-4"><dt class="text-sm text-white/80">Abierto</dt><dd class="text-3xl font-bold">7 a 18</dd></div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const boton = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    boton.addEventListener("click", () => {
+      const abierto = menu.classList.toggle("hidden") === false;
+      menu.classList.toggle("flex", abierto);
+      boton.setAttribute("aria-expanded", String(abierto));
+    });
+  </script>
+</body>
+</html>

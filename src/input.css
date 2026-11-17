@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ruta: #2e7d32;
+  --color-ruta-oscuro: #1f5a24;
+  --color-pedal: #f57c00;
+  --color-tinta: #1b2a1f;
+  --color-papel: #f4f7f2;
+}
