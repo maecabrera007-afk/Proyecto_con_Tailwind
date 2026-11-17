@@ -93,8 +93,91 @@
         <article class="rounded-xl bg-ruta p-6 text-white"><h3 class="font-bold">Cancelación gratis</h3><p class="mt-2 text-sm">Hasta 24 horas antes de tu reserva.</p><p class="mt-4 text-2xl font-bold">24 h</p></article>
       </div>
     </section>
-  </main>
 
+        <section id="reservas" class="bg-white">
+      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-3">
+        <form action="#" method="post" class="space-y-6 md:col-span-2">
+          <h2 class="text-3xl font-bold">Reserva tu bicicleta</h2>
+          <fieldset class="grid gap-4 sm:grid-cols-2">
+            <legend class="mb-2 font-semibold">Tus datos</legend>
+            <div><label for="nombre" class="block text-sm font-medium">Nombre completo</label><input id="nombre" name="nombre" type="text" required autocomplete="name" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+            <div><label for="correo" class="block text-sm font-medium">Correo</label><input id="correo" name="correo" type="email" required autocomplete="email" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+            <div><label for="telefono" class="block text-sm font-medium">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+          </fieldset>
+          <fieldset class="grid gap-4 sm:grid-cols-3">
+            <legend class="mb-2 font-semibold">Tu alquiler</legend>
+            <div class="sm:col-span-3 md:col-span-1"><label for="modelo" class="block text-sm font-medium">Modelo</label>
+              <select id="modelo" name="modelo" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta">
+                <option>Urbana</option><option>Montaña</option><option>Eléctrica</option><option>Plegable</option><option>Ruta</option><option>Infantil</option><option>Tándem</option>
+              </select></div>
+            <div><label for="fecha" class="block text-sm font-medium">Fecha</label><input id="fecha" name="fecha" type="date" required class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+            <div><label for="horas" class="block text-sm font-medium">Horas</label><input id="horas" name="horas" type="number" min="1" max="10" value="2" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+          </fieldset>
+          <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="acepto" required class="mt-1 size-4 accent-ruta"> Acepto las políticas de alquiler.</label>
+          <button type="submit" class="w-full rounded-lg bg-ruta px-6 py-3 font-bold text-white hover:bg-ruta-oscuro focus:outline-2 focus:outline-offset-2 focus:outline-ruta sm:w-auto">Confirmar reserva</button>
+        </form>
+        <aside class="h-fit rounded-xl bg-papel p-6">
+          <h3 class="font-bold">Horario de atención</h3>
+          <p class="mt-2 text-sm">Lunes a domingo, 7:00 a. m. a 6:00 p. m.</p>
+          <h3 class="mt-6 font-bold">Contacto</h3>
+          <p class="mt-2 text-sm"><a class="font-medium text-ruta-oscuro underline" href="mailto:maecabrera007@gmail.com">maecabrera007@gmail.com</a></p>
+        </aside>
+      </div>
+    </section>
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Componentes | Rueda Libre</title>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="bg-papel p-6 text-tinta antialiased sm:p-10">
+  <main class="mx-auto max-w-4xl space-y-12">
+    <h1 class="text-3xl font-bold">Componentes con Tailwind</h1>
+
+    <section aria-labelledby="botones">
+      <h2 id="botones" class="text-xl font-semibold">Botones</h2>
+      <div class="mt-4 flex flex-wrap gap-3">
+        <button type="button" class="rounded-lg bg-ruta px-5 py-2 font-semibold text-white hover:bg-ruta-oscuro focus:outline-2 focus:outline-offset-2 focus:outline-ruta">Principal</button>
+        <button type="button" class="rounded-lg bg-pedal px-5 py-2 font-semibold text-tinta hover:bg-tinta hover:text-white">Secundario</button>
+        <button type="button" class="rounded-lg border border-ruta px-5 py-2 font-semibold text-ruta hover:bg-ruta hover:text-white">Contorno</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="cards">
+      <h2 id="cards" class="text-xl font-semibold">Cards</h2>
+      <div class="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-xl border border-ruta/20 bg-white p-5"><h3 class="font-bold">Ruta del río</h3><p class="mt-2 text-sm">Recorrido plano de 12 km por la ciclovía.</p><a href="#" class="mt-4 inline-block font-semibold text-ruta-oscuro underline">Ver ruta</a></article>
+        <article class="rounded-xl border border-ruta/20 bg-white p-5"><h3 class="font-bold">Ruta del centro</h3><p class="mt-2 text-sm">Plazas, museos y cafés en 8 km.</p><a href="#" class="mt-4 inline-block font-semibold text-ruta-oscuro underline">Ver ruta</a></article>
+        <article class="rounded-xl border border-ruta/20 bg-white p-5"><h3 class="font-bold">Ruta de ladera</h3><p class="mt-2 text-sm">Subidas con vista a la ciudad.</p><a href="#" class="mt-4 inline-block font-semibold text-ruta-oscuro underline">Ver ruta</a></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="alertas">
+      <h2 id="alertas" class="text-xl font-semibold">Alertas e insignias</h2>
+      <div class="mt-4 space-y-3">
+        <p role="alert" class="rounded-lg border-l-4 border-pedal bg-white p-4 text-sm">Recuerda traer tu documento de identidad.</p>
+        <p class="rounded-lg border-l-4 border-ruta bg-white p-4 text-sm">Reserva confirmada.</p>
+        <p class="flex flex-wrap gap-2 text-xs font-semibold"><span class="rounded-full bg-ruta px-3 py-1 text-white">Eléctrica</span><span class="rounded-full bg-pedal px-3 py-1 text-tinta">Nuevo</span><span class="rounded-full border border-tinta/40 px-3 py-1">Disponible</span></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="campos">
+      <h2 id="campos" class="text-xl font-semibold">Campos de formulario</h2>
+      <form action="#" method="post" class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div><label for="c-nombre" class="block text-sm font-medium">Nombre</label><input id="c-nombre" name="nombre" type="text" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"></div>
+        <div><label for="c-modelo" class="block text-sm font-medium">Modelo</label><select id="c-modelo" name="modelo" class="mt-1 w-full rounded-md border border-tinta/40 px-3 py-2 focus:outline-2 focus:outline-ruta"><option>Urbana</option><option>Montaña</option></select></div>
+        <div class="sm:col-span-2"><button type="submit" class="rounded-lg bg-ruta px-5 py-2 font-semibold text-white hover:bg-ruta-oscuro">Enviar</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+  </main>
+  <footer class="bg-tinta py-8 text-center text-sm text-white/80">
+    <p>© 2026 Rueda Libre · Medellín, Colombia</p>
+  </footer>
   <script>
     const boton = document.getElementById("menu-btn");
     const menu = document.getElementById("menu");
